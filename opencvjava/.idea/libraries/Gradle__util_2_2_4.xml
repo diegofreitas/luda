@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: util-2.2.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.smali/util/2.2.4/7075f4bc3c243927cdd25c49b7171e40d8c9b31e/util-2.2.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.smali/util/2.2.4/1e1601ac02566f3ca93f3f381338fb47c48bd81a/util-2.2.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

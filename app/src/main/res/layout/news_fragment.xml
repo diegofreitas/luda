@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/thumb_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@drawable/news_placeholder"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/pub_date"
+        android:textSize="14pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:visibility="gone"
+        android:text="Wed, 20 Mar 2019 22:55:15 -0000"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="1000sp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/thumb_img"
+        android:layout_marginTop="100dp"
+        android:background="#80000000"
+        android:gravity="right"
+        android:padding="8dp"
+        android:text="TEmplate"
+        android:textAppearance="?android:attr/textAppearanceLargeInverse"
+        android:textSize="20pt" />
+
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/thumb_img"
+        android:layout_marginBottom="40dp"
+        android:ellipsize="end"
+        android:background="#80000000"
+        android:maxLines="5"
+        android:padding="20dp"
+
+        android:text="Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum"
+        android:textAppearance="?android:attr/textAppearanceLargeInverse"
+        android:textSize="16pt" />
+</RelativeLayout>
+
+

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "401375709350",
+    "firebase_url": "https://luda-ec6e9.firebaseio.com",
+    "project_id": "luda-ec6e9",
+    "storage_bucket": "luda-ec6e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401375709350:android:6bbd3796d7cf7c89",
+        "android_client_info": {
+          "package_name": "io.luda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401375709350-uk5ga8832hta7vtugbf3lapujorg4g9l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.luda",
+            "certificate_hash": "7d51bea586c01bd685503b84b29886029c703593"
+          }
+        },
+        {
+          "client_id": "401375709350-7f0803rirrq63oc55hl2fmn23tmv8rai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBW7hUxD9PAgS-7hgdkgDWznxB4AwPyNY8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401375709350-7f0803rirrq63oc55hl2fmn23tmv8rai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

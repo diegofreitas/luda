@@ -1,0 +1,119 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "io.luda"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 5
+        versionName "1.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ndk {
+                abiFilters "armeabi-v7a", "arm64-v8a","x86" // includes ARM SO files only, so no x86 SO file
+            }
+        }
+
+        /*
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ndk {
+                abiFilters "armeabi-v7a" // includes ARM SO files only, so no x86 SO file
+            }
+        }*/
+    }
+    aaptOptions {
+        noCompress "tflite"
+    }
+    packagingOptions {
+        exclude 'META-INF/androidx.exifinterface_exifinterface.version'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+        exclude 'META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version'
+        exclude 'META-INF/androidx.customview_customview.version'
+        exclude 'META-INF/androidx.legacy_legacy-support-core-ui.version'
+        exclude 'META-INF/androidx.legacy_legacy-support-core-utils'
+        exclude 'META-INF/androidx.legacy_legacy-support-core-utils.version'
+        exclude 'META-INF/androidx.slidingpanelayout_slidingpanelayout.version'
+        exclude 'META-INF/androidx.print_print.version'
+        exclude 'META-INF/androidx.documentfile_documentfile.version'
+        exclude 'META-INF/androidx.versionedparcelable_versionedparcelable.version'
+        exclude 'META-INF/androidx.asynclayoutinflater_asynclayoutinflater.version'
+        exclude 'META-INF/androidx.drawerlayout_drawerlayout.version'
+        exclude 'META-INF/androidx.interpolator_interpolator.version'
+        exclude 'META-INF/androidx.appcompat_appcompat.version'
+        exclude 'META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version'
+        exclude 'META-INF/androidx.loader_loader.version'
+        exclude 'META-INF/androidx.viewpager_viewpager.version'
+        exclude 'META-INF/androidx.cardview_cardview.version'
+        exclude 'META-INF/androidx.coordinatorlayout_coordinatorlayout.version'
+        exclude 'META-INF/androidx.cursoradapter_cursoradapter.version'
+        exclude 'META-INF/androidx.fragment_fragment.version'
+        exclude 'META-INF/androidx.vectordrawable_vectordrawable.version'
+        exclude 'META-INF/androidx.core_core.version'
+        exclude 'META-INF/androidx.vectordrawable_vectordrawable-animated.version'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/spring.schemas'
+        exclude 'META-INF/spring.tooling'
+        exclude 'META-INF/spring.handlers'
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path file('src/main/jni/Android.mk')
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+
+    }
+}
+dependencies {
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.prof.rssparser:rssparser:2.0.3'
+    implementation('org.jeasy:easy-states:1.0.1')
+
+    implementation 'com.google.firebase:firebase-analytics:16.4.0'
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+   implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.google.firebase:firebase-storage:16.1.0'
+    implementation 'com.google.firebase:firebase-common:16.1.0'
+    implementation 'com.google.firebase:firebase-auth:16.2.0'
+    implementation 'com.google.firebase:firebase-firestore:18.2.0'
+    implementation 'com.google.firebase:firebase-config:16.4.1'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
+    implementation 'com.firebaseui:firebase-ui-auth:4.1.0'
+    implementation ('com.android.support:support-v4:28.0.0')
+    implementation 'com.android.support:exifinterface:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    /*implementation 'com.google.android.exoplayer:exoplayer-core:2.7.3'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.7.3'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.7.3'
+    implementation 'com.google.android.exoplayer:extension-okhttp:2.7.3'
+    */
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // ML Kit dependencies
+    /*implementation 'com.google.firebase:firebase-ml-vision:19.0.2'
+    implementation 'com.google.firebase:firebase-ml-vision-image-label-model:17.0.2'
+    implementation 'com.google.firebase:firebase-ml-vision-face-model:17.0.2'
+    implementation 'com.google.firebase:firebase-ml-model-interpreter:17.0.3'*/
+    implementation project(':opencvjava4')
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'org.jsoup:jsoup:1.11.3'//usar o volley
+}
+
+configurations {
+    compile.exclude module: 'com.android.support:support-compat'
+}
+
+apply plugin: 'com.google.gms.google-services'

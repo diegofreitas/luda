@@ -1,0 +1,10 @@
+{
+  "ads": {
+    "apps":[{
+       "app_interstitial_url": "https://firebasestorage.googleapis.com/v0/b/luda-ec6e9.appspot.com/o/frame-bohemia-04.jpg?alt=media",
+       "app_uri": "",
+       "app_adType": "interstitial"
+    }]
+  }
+  
+}
